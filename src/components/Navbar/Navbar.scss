@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    width: 100%;
+}
+
+.projects {
+background: yellow;
+display: flex;
+justify-content: center;
+}
+
+.contact {
+    background: blue;
+    display: flex;
+    justify-content: center;
+}
+
+.about {
+    background: red;
+    display: flex;
+    justify-content: center;
+    background: salmon;
+}
+
+
+a {
+    text-decoration: none;
+    color: red;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
