@@ -1,4 +1,6 @@
 import React from "react";
+import BookGallery from "../../components/BookGallery/BookGallery";
+import Utilisateurs from "../../components/Utilisateurs/Utilisateurs";
 import "./home.css";
 
 const HomePage = () => {
@@ -6,11 +8,31 @@ const HomePage = () => {
     <div>
       <h1>Welcome to my Home Page</h1>
       <p>This is the home page of my website built with ReactJS.</p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium
-        dolorum soluta sit suscipit iste fuga dicta sint, qui maiores eaque quod
-        tempore eligendi ut repellat hic? Debitis totam nesciunt libero!
-      </p>
+      <BookGallery />
+      <Utilisateurs
+        name={"Jean"}
+        height={175}
+        weight={68}
+        description={"Cause I am an alligator, against the allegation"}
+      />
+      <Utilisateurs
+        name={"Sophie"}
+        height={165}
+        weight={55}
+        description={"I love hiking and spending time outdoors"}
+      />
+      <Utilisateurs
+        name={"Samuel"}
+        height={180}
+        weight={80}
+        description={"I enjoy playing sports and staying active"}
+      />
+      <Utilisateurs
+        name={"Emma"}
+        height={160}
+        weight={50}
+        description={"I love reading and spending time with my pets"}
+      />
     </div>
   );
 };

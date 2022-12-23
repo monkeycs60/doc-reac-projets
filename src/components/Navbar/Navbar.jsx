@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const NavBar = () => {
@@ -7,13 +7,28 @@ const NavBar = () => {
     <nav className="navbar-div">
       <ul className="page-list">
         <li className="projects">
-          <Link to="/projects">Projects</Link>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) => (isActive ? "activeRoute" : undefined)}
+          >
+            Projects
+          </NavLink>
         </li>
         <li className="contact">
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "activeRoute" : undefined)}
+          >
+            Contact
+          </NavLink>
         </li>
         <li className="about">
-          <Link to="/about">About</Link>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "activeRoute" : undefined)}
+          >
+            About
+          </NavLink>
         </li>
       </ul>
     </nav>

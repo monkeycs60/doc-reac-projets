@@ -6,13 +6,14 @@ import ProjectsPage from "./pages/projectspage/ProjectsPage";
 import ContactPage from "./pages/contactpage/ContactPage";
 import AboutPage from "./pages/aboutpage/AboutPage";
 import NavBar from "./components/Navbar/Navbar";
-
+import IconHome from "./components/IconHome/IconHome";
 
 const App = () => {
   return (
     <BrowserRouter>
       <React.Fragment>
         <NavBar />
+        <IconHome />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />

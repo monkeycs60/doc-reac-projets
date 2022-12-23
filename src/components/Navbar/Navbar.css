@@ -9,6 +9,23 @@
   justify-content: center;
   align-items: center;
 }
+.page-list a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  margin: 0 1em;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.page-list .activeRoute {
+  color: cyan;
+  font-size: 2.5em;
+  text-decoration: dotted;
+}
 
 li {
   width: 100%;
@@ -31,12 +48,4 @@ li {
   display: flex;
   justify-content: center;
   background: salmon;
-}
-
-a {
-  text-decoration: none;
-  color: red;
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
