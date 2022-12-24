@@ -14,7 +14,7 @@ const ToDo = () => {
     const newTask = {
       id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
       task: task,
-      completed: true,
+      completed: false,
     };
     setTasks([...tasks, newTask]);
     setTask("");
@@ -48,7 +48,9 @@ const ToDo = () => {
               {task.task}
               <button
                 onClick={() => handleComplete(task.id)}
-                className={task.completed ? "incompleteClass" : "completeClass"}
+                className={
+                  task.completed ? "completeClass" : "incompleteClass"
+                }
               >
                 {task.completed ? "Complete" : "Incomplete"}
               </button>
