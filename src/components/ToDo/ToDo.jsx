@@ -46,7 +46,10 @@ const ToDo = () => {
           {tasks.map((task) => (
             <li key={task.id}>
               {task.task}
-              <button onClick={() => handleComplete(task.id)}>
+              <button
+                onClick={() => handleComplete(task.id)}
+                className={task.completed ? "incompleteClass" : "completeClass"}
+              >
                 {task.completed ? "Complete" : "Incomplete"}
               </button>
               <button onClick={() => handleDelete(task.id)}>X</button>
