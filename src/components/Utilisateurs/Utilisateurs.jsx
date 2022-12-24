@@ -4,12 +4,8 @@ import "./Utilisateurs.css";
 const Utilisateurs = ({ name, height, weight, description }) => {
   const [isRemoved, setIsRemoved] = useState(false);
 
-  const handleRemove = () => {
-    setIsRemoved(true);
-  };
-
-  const handleRestore = () => {
-    setIsRemoved(false);
+  const handleChange = () => {
+    setIsRemoved(!isRemoved);
   };
 
   return (
@@ -42,10 +38,10 @@ const Utilisateurs = ({ name, height, weight, description }) => {
             kg
           </p>
           <p>Description: {description}</p>
-          <button onClick={handleRemove}>Remove</button>
+          <button onClick={handleChange}>Remove</button>
         </div>
       ) : (
-        <button onClick={handleRestore}>Restore</button>
+        <button onClick={handleChange}>Restore</button>
       )}
     </div>
   );
