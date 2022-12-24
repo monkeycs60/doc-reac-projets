@@ -1,4 +1,5 @@
 import React from "react";
+import ToDo from "../../components/ToDo/ToDo";
 import "./ProjectsPage.css";
 
 const ProjectsPage = () => {
@@ -20,6 +21,7 @@ const ProjectsPage = () => {
           Socket.io
         </li>
       </ul>
+      <ToDo />
     </div>
   );
 };
