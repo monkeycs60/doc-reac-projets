@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import HomePage from "./pages/home/homePage";
@@ -8,10 +8,15 @@ import AboutPage from "./pages/aboutpage/AboutPage";
 import NavBar from "./components/Navbar/Navbar";
 import IconHome from "./components/IconHome/IconHome";
 
+export const TaskContext = React.createContext();
+
 const App = () => {
+    const [task, setTask] = useState("");
+    const [tasks, setTasks] = useState([]);
   return (
     <BrowserRouter>
       <React.Fragment>
+          <TaskContext.Provider value={{ task, setTask, tasks, setTasks }}>
         <NavBar />
         <IconHome />
         <Routes>
@@ -20,6 +25,7 @@ const App = () => {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
+          </TaskContext.Provider>
       </React.Fragment>
     </BrowserRouter>
   );

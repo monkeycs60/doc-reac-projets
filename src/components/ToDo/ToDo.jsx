@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { TaskContext } from "../../App.jsx";
 import "./ToDo.css";
 
+
 const ToDo = () => {
-  const [task, setTask] = useState("");
-  const [tasks, setTasks] = useState([]);
+  const { task, setTask, tasks, setTasks } = useContext(TaskContext);
 
   const handleChange = (e) => {
     setTask(e.target.value);
@@ -48,9 +49,7 @@ const ToDo = () => {
               {task.task}
               <button
                 onClick={() => handleComplete(task.id)}
-                className={
-                  task.completed ? "completeClass" : "incompleteClass"
-                }
+                className={task.completed ? "completeClass" : "incompleteClass"}
               >
                 {task.completed ? "Complete" : "Incomplete"}
               </button>

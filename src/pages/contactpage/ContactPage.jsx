@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TaskContext } from "../../App.jsx";
 import "./ContactPage.css";
 
 const ContactPage = () => {
+  const { tasks } = useContext(TaskContext);
+
   return (
     <div>
       <h1>Contact Claude Dark</h1>
@@ -14,6 +17,11 @@ const ContactPage = () => {
         <li>Phone: 555-555-5555</li>
         <li>LinkedIn: https://www.linkedin.com/in/claudedark/</li>
       </ul>
+      <div>
+        {tasks.map((task) => (
+          <li key={task.id}>{task.task}</li>
+        ))}
+      </div>
     </div>
   );
 };
