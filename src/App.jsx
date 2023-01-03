@@ -11,21 +11,21 @@ import IconHome from "./components/IconHome/IconHome";
 export const TaskContext = React.createContext();
 
 const App = () => {
-    const [task, setTask] = useState("");
-    const [tasks, setTasks] = useState([]);
+  const [task, setTask] = useState("");
+  const [tasks, setTasks] = useState([]);
   return (
     <BrowserRouter>
       <React.Fragment>
-          <TaskContext.Provider value={{ task, setTask, tasks, setTasks }}>
-        <NavBar />
-        <IconHome />
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-          </TaskContext.Provider>
+        <TaskContext.Provider value={{ task, setTask, tasks, setTasks }}>
+          <NavBar />
+          <IconHome />
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </TaskContext.Provider>
       </React.Fragment>
     </BrowserRouter>
   );
