@@ -1,10 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { TaskContext } from "../../App.jsx";
 import "./ToDo.css";
 
-
 const ToDo = () => {
-  const { task, setTask, tasks, setTasks } = useContext(TaskContext);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("memoire")) || []
+  );
+  const { task, setTask } = useContext(TaskContext);
+
+  // Load the saved tasks from local storage when the component mounts
+  useEffect(() => {
+    const savedTasks = localStorage.getItem("memoire");
+    if (savedTasks) {
+      setTasks(JSON.parse(savedTasks));
+    }
+  }, [setTasks]);
+
+  // Save the tasks to local storage whenever the tasks array changes
+  useEffect(() => {
+    localStorage.setItem("memoire", JSON.stringify(tasks));
+  }, [tasks]);
 
   const handleChange = (e) => {
     setTask(e.target.value);
@@ -61,7 +76,5 @@ const ToDo = () => {
     </div>
   );
 };
-
-
 
 export default ToDo;
