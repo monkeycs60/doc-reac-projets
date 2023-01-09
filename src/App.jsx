@@ -7,8 +7,10 @@ import ContactPage from "./pages/contactpage/ContactPage";
 import AboutPage from "./pages/aboutpage/AboutPage";
 import NavBar from "./components/Navbar/Navbar";
 import IconHome from "./components/IconHome/IconHome";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 export const TaskContext = React.createContext();
+const queryClient = new QueryClient({});
 
 const App = () => {
   const [task, setTask] = useState("");
@@ -17,14 +19,16 @@ const App = () => {
     <BrowserRouter>
       <React.Fragment>
         <TaskContext.Provider value={{ task, setTask, tasks, setTasks }}>
-          <NavBar />
-          <IconHome />
-          <Routes>
-            <Route exact path="/" element={<HomePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/about" element={<AboutPage />} />
-          </Routes>
+          <QueryClientProvider client={queryClient}>
+            <NavBar />
+            <IconHome />
+            <Routes>
+              <Route exact path="/" element={<HomePage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/about" element={<AboutPage />} />
+            </Routes>
+          </QueryClientProvider>
         </TaskContext.Provider>
       </React.Fragment>
     </BrowserRouter>

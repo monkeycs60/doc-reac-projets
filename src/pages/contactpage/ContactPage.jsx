@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { TaskContext } from "../../App.jsx";
+import QueryFetch from "../../components/QueryFetch/QueryFetch.jsx";
 import "./ContactPage.css";
 
 const ContactPage = () => {
@@ -22,6 +23,7 @@ const ContactPage = () => {
           <li key={task.id}>{task.task}</li>
         ))}
       </div>
+      <QueryFetch />
     </div>
   );
 };
