@@ -9,8 +9,6 @@ const QueryFetch = () => {
       .then((res) => res.data)
   );
 
-  console.log(data);
-
   if (status === "loading") {
     return <p>Loading...</p>;
   }
