@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { TaskContext } from "../../App.jsx";
+import React from "react";
 import QueryFetch from "../../components/QueryFetch/QueryFetch.jsx";
 import "./ContactPage.css";
 
 const ContactPage = () => {
-  const { tasks } = useContext(TaskContext);
+  // Initialize tasks with the value of the "memoire" item in the local storage
+  const tasks = JSON.parse(localStorage.getItem("memoire")) || [];
 
   return (
     <div>
@@ -19,9 +19,11 @@ const ContactPage = () => {
         <li>LinkedIn: https://www.linkedin.com/in/claudedark/</li>
       </ul>
       <div>
-        {tasks.map((task) => (
-          <li key={task.id}>{task.task}</li>
-        ))}
+        {tasks.length === 0 ? (
+          <p>"No tasks added in the todo list for the moment"</p>
+        ) : (
+          tasks.map((task) => <li key={task.id}>{task.task}</li>)
+        )}
       </div>
       <QueryFetch />
     </div>
