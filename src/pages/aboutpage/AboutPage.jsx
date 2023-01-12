@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "../../components/Form/Form";
 import "./AboutPage.css";
 
 const AboutPage = () => {
@@ -15,7 +16,9 @@ const AboutPage = () => {
         reliable and dependable individual who is driven to succeed in his
         field.
       </p>
+      <Form />
     </div>
+    
   );
 };
 
