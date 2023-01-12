@@ -66,7 +66,8 @@ const Form = () => {
       (alert("Form submitted successfully!"),
       resetForm(),
       localStorage.setItem("formData", JSON.stringify(formData)),
-      window.location.reload()
+      window.location.reload(),
+      console.log(formData.username, formData.dob)
       );
       };
   
@@ -84,7 +85,7 @@ const Form = () => {
     });
 
   return (
-    <div>
+    <div className="formContainer">
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
         <input
@@ -95,12 +96,14 @@ const Form = () => {
           onChange={handleChange}
         />
         <br />
-        <label htmlFor="dob">Date of Birth:</label>
-        <DatePicker
-          selected={formData.dob}
-          onChange={handleDobChange}
-          id="dob"
-        />
+        <div className="dateSpace">
+          <label htmlFor="dob">Date of Birth:</label>
+          <DatePicker
+            selected={formData.dob}
+            onChange={handleDobChange}
+            id="dob"
+          />
+        </div>
         <br />
         <label htmlFor="location">Location:</label>
         <input

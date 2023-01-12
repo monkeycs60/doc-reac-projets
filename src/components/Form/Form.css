@@ -1,3 +1,27 @@
+.formContainer {
+  margin: 2em;
+  padding: 1em;
+}
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #0000ff 0%, #000000 100%);
+  color: #ffffff;
+  border-radius: 15px;
+}
+.formContainer form input, .formContainer form label {
+  background-image: linear-gradient(to right, rgb(72, 2, 76), rgb(255, 255, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.formContainer .dateSpace {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hidden {
   display: none !important;
 }
