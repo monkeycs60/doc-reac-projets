@@ -142,9 +142,9 @@ const Form = () => {
           onChange={handleChange}
         />
         <br />
-        <input type="submit" value="Submit" />
+        <input type="submit" id="submitBtn" value="Submit" />
       </form>
-      <button onClick={resetForm}>Clear Form</button>
+      <button className="resetButton" onClick={resetForm}>Clear Form</button>
       <DataForm />
     </div>
   );

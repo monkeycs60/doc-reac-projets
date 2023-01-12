@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./DataForm.css"
 
 const DataForm = () => {
   const [formData, setFormData] = useState(null);
