@@ -1,0 +1,18 @@
+#DarkButton {
+        background: none;
+        border-radius: 50%;
+        padding: 1em;
+        position: fixed;
+        bottom: 5%;
+        right: 5%;  
+        img {
+            width: 50px;
+            height: 50px;
+        }
+        //hover
+        :hover {
+            padding: 1.5em;
+            cursor: pointer;
+        }
+      
+}

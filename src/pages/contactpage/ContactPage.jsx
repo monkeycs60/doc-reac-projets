@@ -3,7 +3,6 @@ import QueryFetch from "../../components/QueryFetch/QueryFetch.jsx";
 import "./ContactPage.css";
 
 const ContactPage = () => {
-  // Initialize tasks with the value of the "memoire" item in the local storage
   const tasks = JSON.parse(localStorage.getItem("memoire")) || [];
 
   return (

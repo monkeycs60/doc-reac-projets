@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { TaskContext } from "../../App.jsx";
+import { TaskContext } from "../../main.jsx";
 import "./ToDo.css";
 
 const ToDo = () => {
