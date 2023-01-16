@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "../../components/Form/Form";
+import Signature from "../../components/Signature/Signature";
 import "./AboutPage.css";
 
 const AboutPage = () => {
@@ -17,6 +18,7 @@ const AboutPage = () => {
         field.
       </p>
       <Form />
+      <Signature />
     </div>
     
   );

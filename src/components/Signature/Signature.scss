@@ -1,0 +1,21 @@
+.signature-container {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    input {
+border-radius: 10px;
+color: cyan;
+font-weight: bold;        
+    }
+    .signature-replicate {
+        position: fixed;
+        top: 32%;
+        right: 10%;
+        background: linear-gradient(to bottom, red, blue);
+        font-size: 20px;
+        color: white;
+        border: 2px solid cyan;
+        border-radius: 10px;
+        padding: 0 1em;
+    }
+}

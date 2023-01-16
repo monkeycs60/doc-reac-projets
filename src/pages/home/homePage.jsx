@@ -1,5 +1,6 @@
 import React from "react";
 import BookGallery from "../../components/BookGallery/BookGallery";
+import Signature from "../../components/Signature/Signature";
 import Utilisateurs from "../../components/Utilisateurs/Utilisateurs";
 import "./home.css";
 
@@ -33,6 +34,7 @@ const HomePage = () => {
         weight={50}
         description={"I love reading and spending time with my pets"}
       />
+      <Signature />
     </div>
   );
 };

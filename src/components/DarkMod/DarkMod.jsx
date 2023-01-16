@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { DarkModContext } from "../Contexts/DarkContextProvider";
+import { DarkModContext } from "../../Contexts/DarkContextProvider.jsx";
 import LightMoon from "../../assets/moon-solid.svg";
 import DarkMoon from "../../assets/moon-regular.svg";
 import "./DarkMod.css";

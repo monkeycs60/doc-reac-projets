@@ -1,5 +1,6 @@
 import React from "react";
 import QueryFetch from "../../components/QueryFetch/QueryFetch.jsx";
+import Signature from "../../components/Signature/Signature.jsx";
 import "./ContactPage.css";
 
 const ContactPage = () => {
@@ -25,6 +26,7 @@ const ContactPage = () => {
         )}
       </div>
       <QueryFetch />
+      <Signature />
     </div>
   );
 };

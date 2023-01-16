@@ -1,4 +1,5 @@
 import React from "react";
+import Signature from "../../components/Signature/Signature";
 import ToDo from "../../components/ToDo/ToDo";
 import "./ProjectsPage.css";
 
@@ -22,6 +23,7 @@ const ProjectsPage = () => {
         </li>
       </ul>
       <ToDo />
+      <Signature />
     </div>
   );
 };
