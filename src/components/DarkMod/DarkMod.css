@@ -7,10 +7,14 @@
   right: 5%;
 }
 #DarkButton img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 #DarkButton :hover {
-  padding: 1.5em;
+  padding: 0.5em;
   cursor: pointer;
+}
+
+.button-bg {
+  background: goldenrod !important;
 }

@@ -4,7 +4,7 @@ import "./AboutPage.css";
 
 const AboutPage = () => {
   return (
-    <div className="darker">
+    <div>
       <h1>About Claude Dark</h1>
       <p>
         Claude Dark is an average computer guy with a passion for technology and
