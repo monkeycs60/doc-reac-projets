@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import "./Signature.css"
+import "./Signature.css";
+
 
 const Signature = () => {
   const [signature, setSignature] = useState("");
+
+
 
   return (
     <div className="signature-container">
@@ -11,10 +14,14 @@ const Signature = () => {
         value={signature}
         onChange={(e) => setSignature(e.target.value)}
       />
+      <button type="button">
+        Envoyer la signature
+      </button>
       <div className={signature !== "" ? "signature-replicate" : null}>
-      {signature}</div>
+        {signature}
+      </div>
     </div>
   );
-}
+};
 
 export default Signature;
