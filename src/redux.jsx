@@ -3,25 +3,21 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 const signatureSlice = createSlice({
   name: "signature",
   initialState: {
-    signature: null,
+    signature: "",
   },
   reducers: {
-    setSignature(state, action) {
+    updateSignature(state, action) {
       state.signature = action.payload;
-    },
-    resetSignature(state) {
-      state.signature = null;
     },
   },
 });
 
-export const { setSignature, resetSignature } = signatureSlice.actions;
+export const { updateSignature } = signatureSlice.actions;
 
 const store = configureStore({
-    reducer: {
-        signature: signatureSlice.reducer,
-    },
-
+  reducer: {
+    signature: signatureSlice.reducer,
+  },
 });
 
 export default store;

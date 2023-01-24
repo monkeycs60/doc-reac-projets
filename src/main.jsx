@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import DarkContextProvider from "./Contexts/DarkContextProvider.jsx";
 import TaskContextProvider from "./Contexts/TaskContext.jsx";
 import { Provider } from "react-redux";
-import store from "./store.jsx"
+import store from "./redux.jsx"
 
 const queryClient = new QueryClient({});
 
