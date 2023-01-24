@@ -3,7 +3,7 @@ import { updateSignature } from "../../redux.jsx";
 import "./Signature.css";
 
 const Signature = () => {
-  const signature = useSelector((state) => state.signature.signature);
+  const { signature } = useSelector((state) => state.signature);
   console.log(signature);
   const dispatch = useDispatch();
 
